@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatCell | Formación Tecnológica</title>
+    <meta name="description"
+        content="BeatCell Academy - Formación tecnológica presencial en robótica, electrónica y reparación profesional en Villa María del Triunfo.">
+    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+
+<body>
+
+    <header class="topbar" id="navbar">
+
+        <div class="container topbar-content">
+
+            <!-- LOGO -->
+            <a href="#hero-inicio" class="logo">
+                <img src="img/logo-white.png" alt="Beatcell">
+                <span>BEATCELL</span>
+            </a>
+
+            <!-- BOTON HAMBURGUESA -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- MENU DESKTOP -->
+            <nav class="menu desktop" id="menu-desktop">
+                <a href="#hero-inicio">Inicio</a>
+                <a href="#programas">Cursos</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <!-- MENU MOBILE -->
+            <nav class="menu mobile" id="menu-mobile">
+                <a href="#hero-inicio">Inicio</a>
+                <a href="#programas">Cursos</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+
+    </header>
+    <div class="menu-overlay" id="overlay"></div>
+    <main>
+        <section class="hero" id="hero-inicio">
+            <div class="container hero-content">
+
+                <div class="hero-left" data-aos="fade-right">
+
+                    <span class="badge">FÓRMATE EN TECNOLOGÍA Y CONSTRUYE TU FUTURO</span>
+
+                    <h1 class="hero-title">
+                        DOMINA LA <br>
+                        <span>TECNOLOGÍA</span>
+                    </h1>
+                    <p class="subtitulo">
+                        En <strong>BeatCell Academy</strong> enseñamos Reparación, Electrónica y Robótica con
+                        metodología
+                        100% práctica en clases presenciales.
+                    </p>
+
+                    <p class="extra">
+                        Programas para jóvenes y niños desde los 7 años.
+                        Empieza desde cero y aprende haciendo.
+                    </p>
+
+                    <ul class="beneficios">
+                        <li data-aos="fade-up" data-aos-delay="100">✔ Taller equipado</li>
+                        <li data-aos="fade-up" data-aos-delay="200">✔ Formación presencial</li>
+                        <li data-aos="fade-up" data-aos-delay="300">✔ Certificación</li>
+                        <li data-aos="fade-up" data-aos-delay="400">✔ Docentes especializados</li>
+                    </ul>
+                </div>
+
+                <div class="hero-right" data-aos="fade-left" data-aos-delay="200">
+                    <form id="formulario" class="formulario" data-curso="General">
+                        <h3>INSCRÍBETE AHORA</h3>
+
+                        <input type="text" id="nombreCurso" placeholder="Nombre completo*" required>
+
+                        <input type="tel" id="telefono" placeholder="Teléfono / WhatsApp*" required pattern="[0-9]{9}"
+                            maxlength="9" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+
+                        <input type="email" id="email" placeholder="Correo electrónico (opcional)">
+
+                        <select id="programa" required>
+                            <option value="">Selecciona Curso*</option>
+                            <option>Reparación de Celulares y Tablet</option>
+                            <option>Reparación de PC y Laptop</option>
+                            <option>Electrónica</option>
+                            <option>Robótica Kids (7-12)</option>
+                            <option>Robótica (12-17)</option>
+                            <option>Reparación de Electrodomésticos</option>
+                            <option>Ofimática</option>
+                            <option>Diseño Gráfico</option>
+                        </select>
+
+                        <textarea id="mensajeCurso" placeholder="Consulta o comentario (opcional)"></textarea>
+
+                        <button type="submit">QUIERO INFORMACIÓN</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section dark">
+            <div class="container center">
+                <h2>¿Quiénes somos?</h2>
+                <p>
+                    BeatCell Academy es una institución dedicada a formar profesionales en el área tecnológica,
+                    especializada en reparación de equipos electrónicos, robótica y electrónica digital.
+                    Contamos con docentes altamente capacitados y un taller de última generación para ofrecer formación
+                    100%
+                    práctica.
+                </p>
+            </div>
+        </section>
+
+        <section class="section cursos" id="programas">
+            <div class="container">
+                <h2 class="center">Nuestros Cursos</h2>
+                <div class="cards">
+
+                    <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                        <h3>Reparación de Celulares y Tablet</h3>
+                        <p>Aprende diagnóstico profesional, cambio de pantallas, software y reparación avanzada.</p>
+                        <a href="cursos/celulares.html">
+                            <button>Ver Curso</button>
+                        </a>
+                    </div>
+
+                    <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                        <h3>Reparación de PC y Laptop</h3>
+                        <p>Mantenimiento, ensamblaje, reparación de placas y diagnóstico técnico.</p>
+                        <a href="cursos/pc.html">
+                            <button>Ver Curso</button>
+                        </a>
+                    </div>
+
+                    <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                        <h3>Electrónica</h3>
+                        <p>Fundamentos electrónicos, componentes, soldadura y proyectos prácticos.</p>
+                        <a href="cursos/electronica.html">
+                            <button>Ver Curso</button>
+                        </a>
+                    </div>
+                    <div class="card" data-aos="zoom-in" data-aos-delay="400">
+                        <h3>Robótica Kids (7-12)</h3>
+                        <p>Programación y construcción de robots educativos para niños.</p>
+                        <a href="cursos/robotica-kids.html">
+                            <button>Ver Curso</button>
+                        </a>
+                    </div>
+
+                    <div class="card" data-aos="zoom-in" data-aos-delay="500">
+                        <h3>Robótica (12-17)</h3>
+                        <p>Arduino, sensores y proyectos tecnológicos avanzados para jóvenes.</p>
+                        <a href="cursos/robotica.html">
+                            <button>Ver Curso</button>
+                        </a>
+                    </div>
+
+                    <div class="card" data-aos="zoom-in" data-aos-delay="600">
+                        <h3>Reparación de Electrodomésticos</h3>
+                        <p>Diagnóstico y reparación de equipos eléctricos y electrónicos del hogar.</p>
+                        <a href="cursos/electrodomesticos.html">
+                            <button>Ver Curso</button>
+                        </a>
+                    </div>
+                    <div class="card" data-aos="zoom-in" data-aos-delay="700">
+                        <h3>Ofimática</h3>
+                        <p>Aprende Word, Excel y PowerPoint para el ámbito académico y profesional.</p>
+                        <a href="cursos/ofimatica.html">
+                            <button>Ver Curso</button>
+                        </a>
+                    </div>
+
+                    <div class="card" data-aos="zoom-in" data-aos-delay="800">
+                        <h3>Diseño Gráfico</h3>
+                        <p>Crea piezas visuales impactantes con Photoshop e Illustrator desde cero.</p>
+                        <a href="cursos/diseno-grafico.html">
+                            <button>Ver Curso</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="section dark">
+
+            <div class="container center">
+
+                <h2>Tecnologías que aprenderás</h2>
+
+                <p style="max-width:700px;margin:auto;color:#bbb;">
+                    Durante nuestros cursos trabajarás con herramientas y tecnologías
+                    utilizadas actualmente en electrónica, reparación y robótica.
+                </p>
+
+                <div class="tech">
+
+                    <span>Arduino</span>
+                    <span>Android</span>
+                    <span>Electrónica</span>
+                    <span>Hardware</span>
+                    <span>IoT</span>
+                    <span>Robótica</span>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GALERÍA CARRUSEL -->
+        <section class="section dark" id="galeria">
+            <div class="container center">
+
+                <h2 data-aos="fade-up">Galería</h2>
+
+                <div class="carousel" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="carousel-track">
+
+                        <img src="img/img1.jpeg" alt="Imagen 1">
+                        <img src="img/img2.jpeg" alt="Imagen 2">
+                        <img src="img/img3.jpg" alt="Imagen 3">
+
+                        <!-- DUPLICADAS para efecto infinito -->
+                        <img src="img/img1.jpeg" alt="Imagen 1">
+                        <img src="img/img2.jpeg" alt="Imagen 2">
+                        <img src="img/img3.jpg" alt="Imagen 3">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <h2 class="center">Opiniones de estudiantes</h2>
+
+                <div class="cards">
+
+                    <div class="card" data-aos="fade-up" data-aos-delay="100">
+                        <p>"Aprendí reparación de celulares desde cero y ahora trabajo en un servicio técnico."</p>
+                        <h4>- Luis R.</h4>
+                    </div>
+
+                    <div class="card" data-aos="fade-up" data-aos-delay="200">
+                        <p>"Las clases son muy prácticas y los profesores explican muy bien."</p>
+                        <h4>- Daniela M.</h4>
+                    </div>
+
+                    <div class="card" data-aos="fade-up" data-aos-delay="300">
+                        <p>"Mi hijo está en robótica kids y le encanta construir robots."</p>
+                        <h4>- Carlos P.</h4>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="section" id="faq">
+            <div class="container">
+                <h2 class="center">Preguntas Frecuentes</h2>
+                <div class="faq">
+
+                    <details data-aos="fade-up" data-aos-delay="100">
+                        <summary>¿Qué modalidad ofrecen?</summary>
+                        <p>Todos nuestros programas son 100% presenciales en Villa María del Triunfo.</p>
+                    </details>
+
+                    <details data-aos="fade-up" data-aos-delay="200">
+                        <summary>¿Necesito experiencia previa?</summary>
+                        <p>No es necesario. Nuestros programas básicos están diseñados para principiantes.</p>
+                    </details>
+
+                    <details data-aos="fade-up" data-aos-delay="300">
+                        <summary>¿Entregan certificado?</summary>
+                        <p>Sí. Al finalizar el programa se entrega certificado de participación.</p>
+                    </details>
+
+                    <details data-aos="fade-up" data-aos-delay="400">
+                        <summary>¿Qué materiales necesito?</summary>
+                        <p>La academia proporciona herramientas durante las clases.</p>
+                    </details>
+
+                    <details data-aos="fade-up" data-aos-delay="500">
+                        <summary>¿Cómo me inscribo?</summary>
+                        <p>Completa el formulario o escríbenos directamente a WhatsApp.</p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section dark" id="contacto">
+            <div class="container center">
+                <h2>¿Dónde encontrarnos?</h2>
+                <p>Av. La Unión 1496, Villa María del Triunfo - Lima</p>
+
+                <iframe
+                    src="https://www.google.com/maps?q=Av.+La+Unión+1496,+Villa+María+del+Triunfo,+Perú&output=embed"
+                    width="100%" height="350" style="border:0;" loading="lazy">
+                </iframe>
+
+            </div>
+        </section>
+        <div id="lightbox" class="lightbox">
+
+            <span class="close">&times;</span>
+
+            <img class="lightbox-content" id="lightbox-img">
+
+        </div>
+        <section class="section dark">
+            <div class="container center">
+
+                <h2>Empieza tu formación tecnológica hoy</h2>
+
+                <p>Inscríbete ahora y recibe información completa de nuestros programas.</p>
+
+                <a href="#hero-inicio" data-aos="fade-up" data-aos-delay="200">
+                    <button class="cta">Inscribirme ahora</button>
+                </a>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <div class="footer-col">
+                <img src="img/logo-black.png" alt="BeatCell Academy" class="footer-logo">
+                <p>
+                    BeatCell Academy es una institución especializada en formación tecnológica práctica en robótica,
+                    electrónica digital y reparación profesional.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html#programas">Programas</a></li>
+                    <li><a href="libro-reclamaciones.html">Libro de Reclamaciones</a></li>
+                    <li><a href="terminos.html">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>📍 Av. La Unión 1496<br>Villa María del Triunfo</p>
+                <p>📞 +51 910 488 419</p>
+                <p>✉ contacto@beatcellacademy.com</p>
+            </div>
+            <div class="social">
+
+                <a href="https://www.facebook.com/profile.php?id=61574682905135" target="_blank" class="social-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 4.99 3.66 9.13 8.44 9.93v-7.02H7.9v-2.91h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.77l-.44 2.91h-2.33V22c4.78-.8 8.44-4.94 8.44-9.93z" />
+                    </svg>
+                </a>
+
+                <a href="https://www.instagram.com/academiasmartcell" target="_blank" class="social-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 5.8A4.2 4.2 0 1 1 7.8 12 4.2 4.2 0 0 1 12 7.8zm0 6.9A2.7 2.7 0 1 0 9.3 12 2.7 2.7 0 0 0 12 14.7zM17.8 6.2a1 1 0 1 1-1-1 1 1 0 0 1 1 1z" />
+                    </svg>
+                </a>
+
+                <a href="https://tiktok.com/@academia.smartcell" target="_blank" class="social-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M16 3c.4 2.2 2 3.8 4 4v3c-1.5 0-3-.5-4-1.3V16a6 6 0 1 1-6-6c.4 0 .7 0 1 .1v3a3 3 0 1 0 3 3V3h2z" />
+                    </svg>
+                </a>
+
+                <a href="https://wa.me/51950262596" target="_blank" class="social-icon whatsapp">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M20 3.5A11 11 0 0 0 3.4 17.2L2 22l4.9-1.3A11 11 0 1 0 20 3.5zm-8 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3A9 9 0 1 1 12 20.5zm4.9-6.6c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1a7.3 7.3 0 0 1-2.2-1.4 8.1 8.1 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.7 1.2 2.9.2.2 2 3 4.9 4.2.7.3 1.2.4 1.6.5.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.3.3-.6.3-1.2.2-1.3-.1-.1-.3-.2-.6-.3z" />
+                    </svg>
+                </a>
+
+                <a href="https://wa.me/51910488419" target="_blank" class="social-icon whatsapp">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M20 3.5A11 11 0 0 0 3.4 17.2L2 22l4.9-1.3A11 11 0 1 0 20 3.5zm-8 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3A9 9 0 1 1 12 20.5zm4.9-6.6c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1a7.3 7.3 0 0 1-2.2-1.4 8.1 8.1 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.7 1.2 2.9.2.2 2 3 4.9 4.2.7.3 1.2.4 1.6.5.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.3.3-.6.3-1.2.2-1.3-.1-.1-.3-.2-.6-.3z" />
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © <span id="year"></span> BeatCell Academy | Todos los derechos reservados
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/51910488419?text=Hola%20quiero%20información%20sobre%20los%20cursos" class="whatsapp-float"
+        target="_blank">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M20 3.5A11 11 0 0 0 3.4 17.2L2 22l4.9-1.3A11 11 0 1 0 20 3.5zm-8 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3A9 9 0 1 1 12 20.5zm4.9-6.6c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1a7.3 7.3 0 0 1-2.2-1.4 8.1 8.1 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4 0 1.4 1 2.7 1.2 2.9.2.2 2 3 4.9 4.2.7.3 1.2.4 1.6.5.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2.1-1.3.3-.6.3-1.2.2-1.3-.1-.1-.3-.2-.6-.3z" />
+        </svg>
+    </a>
+
+    <!-- LIBRERÍA AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+
+    <!-- TUS SCRIPTS -->
+    <script src="js/menu.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
+</body>
+
+</html>

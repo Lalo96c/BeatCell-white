@@ -1,0 +1,856 @@
+/* ======================
+RESET / GLOBAL
+====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #1D1D1B;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ======================
+VARIABLES CSS
+====================== */
+:root {
+    --morado: #6E00F9;
+    --naranja: #FF8329;
+    --negro: #1D1D1B;
+    --gris: #F3F1F6;
+    --blanco: #FFFFFF;
+}
+
+/* ======================
+CONTENEDOR / GRID
+====================== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ======================
+NAVBAR / HEADER
+====================== */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 1000;
+    transition: .3s;
+}
+
+.topbar.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.topbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo:visited {
+    color: inherit;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo span {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--morado);
+}
+
+/* MENU DESKTOP */
+.menu.desktop {
+    display: flex;
+    margin-left: auto;
+    gap: 25px;
+    position: static;
+    /* Importante para que se muestre en PC */
+    height: auto;
+    width: auto;
+    background: none;
+    flex-direction: row;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: var(--naranja);
+}
+
+/* MENU MOBILE */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: #000;
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 30px;
+    align-items: center;
+    transition: .4s;
+    z-index: 1000;
+}
+
+.menu.active {
+    right: 0;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+/* HAMBURGER */
+.hamburger {
+    flex-direction: column;
+    gap: 5px;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 1100;
+    display: none;
+    /* por defecto desktop */
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: .3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ======================
+HERO / SECCIÓN PRINCIPAL
+====================== */
+.hero {
+    position: relative;
+    padding: 120px 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .75);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--naranja);
+    color: #000;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.hero-title span {
+    color: var(--morado);
+}
+
+.subtitulo {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.extra {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #a8a8a8;
+}
+
+.beneficios {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* ======================
+FORMULARIO
+====================== */
+.formulario {
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    width: 340px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+}
+
+.formulario h3 {
+    margin-bottom: 15px;
+    color: var(--naranja);
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background: #000;
+    color: #fff;
+}
+
+.formulario textarea {
+    resize: none;
+    height: 90px;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 14px;
+    background: var(--morado);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all .3s ease;
+}
+
+.formulario button:hover {
+    background: var(--naranja);
+}
+
+/* ======================
+SECCIONES GENERALES
+====================== */
+.section {
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+}
+
+.section.dark {
+    background: #111;
+}
+
+.center {
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: var(--naranja);
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 3px;
+}
+
+/* ======================
+CARDS / CURSOS
+====================== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #111;
+    padding: 28px;
+    border-radius: 12px;
+    border-top: 4px solid var(--morado);
+    transition: .35s;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .6);
+    border-top-color: var(--naranja);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #c7c7c7;
+    margin-bottom: 18px;
+}
+
+.card button {
+    background: var(--morado);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card button:hover {
+    background: var(--naranja);
+    transform: scale(1.05);
+}
+
+/* ======================
+FAQ / DETALLES
+====================== */
+.faq {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+details {
+    background: #111;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* ======================
+CURSO INFO / INFO BOX
+====================== */
+.curso-info {
+    padding: 70px 0;
+    background: #0f0f0f;
+}
+
+.curso-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+.info-box {
+    background: #161616;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid var(--morado);
+    transition: .3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.info-box h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.info-box p {
+    color: #bbb;
+    font-size: 15px;
+}
+
+/* ======================
+TECNOLOGÍAS / BOTONES CTA
+====================== */
+.tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.tech span {
+    background: #111;
+    padding: 12px 18px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.tech span:hover {
+    background: var(--morado);
+}
+
+.cta {
+    background: var(--morado);
+    color: white;
+    border: none;
+    padding: 16px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .4);
+}
+
+.cta:hover {
+    background: var(--naranja);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .6);
+}
+
+/* ======================
+FOOTER / SOCIAL / WHATSAPP FLOAT
+====================== */
+.footer {
+    background: #000;
+    padding-top: 60px;
+    border-top: 3px solid var(--morado);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    color: var(--naranja);
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #bdbdbd;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #9f9f9f;
+    transition: .3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--naranja);
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--morado);
+    transition: .3s;
+}
+
+.social-icon svg {
+    width: 20px;
+    fill: white;
+}
+
+.social-icon:hover {
+    background: var(--morado);
+}
+
+.social-icon.whatsapp {
+    border-color: #25D366;
+}
+
+.social-icon.whatsapp:hover {
+    background: #25D366;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .4);
+    z-index: 1000;
+}
+
+.whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    font-size: 14px;
+    color: #999;
+}
+
+/* ======================
+HERO POR HERO (IMÁGENES DE FONDO)
+====================== */
+#hero-inicio {
+    background: url("../img/hero-inicio.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-celulares {
+    background: url("../img/bg-celulares.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-pc {
+    background: url("../img/bg-pc.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-electronica {
+    background: url("../img/bg-electronica.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-electrodomesticos {
+    background: url("../img/bg-electrodomesticos.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-robotica {
+    background: url("../img/bg-robotica.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-robotica-kids {
+    background: url("../img/bg-kids.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-libro-reclamaciones {
+    background: url("../img/bg-libro-reclamaciones.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-terminos {
+    background: url("../img/bg-terminos.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#hero-ofimatica {
+    background: url("../img/bg-ofimatica.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-diseno {
+    background: url("../img/bg-diseno.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ======================
+Carousel 
+====================== */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    touch-action: pan-y;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 15s linear infinite;
+    will-change: transform;
+    min-width: max-content;
+}
+
+.carousel img {
+    width: 250px;
+    max-width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* efecto hover (solo PC) */
+.carousel img:hover {
+    transform: scale(1.05);
+}
+
+/* animación */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* pausa al pasar mouse */
+.carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ======================
+RESPONSIVE / MEDIA QUERIES
+====================== */
+@media (max-width: 768px) {
+
+    /* HERO */
+    .hero {
+        background-attachment: scroll;
+        min-height: 100vh;
+        background-position: center top;
+        padding: 120px 0 100px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+    }
+
+    .extra {
+        font-size: 14px;
+    }
+
+    /* LOGO */
+    .logo img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo span {
+        font-size: 14px;
+    }
+
+    /* MENU MOBILE */
+    .hamburger {
+        display: flex;
+    }
+
+    .menu.desktop {
+        display: none;
+    }
+
+    .menu.mobile {
+        display: flex;
+        /* esto asegura que sea visible cuando esté activo */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background: #000;
+        flex-direction: column;
+        padding-top: 100px;
+        gap: 30px;
+        align-items: center;
+        transition: .4s;
+        z-index: 1000;
+    }
+
+    .menu.mobile.active {
+        right: 0;
+    }
+
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .formulario {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel img {
+        width: 200px;
+        flex-shrink: 0;
+    }
+
+}
+
+/* MENÚ LINKS */
+.menu a {
+    font-size: 14px;
+}

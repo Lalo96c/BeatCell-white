@@ -1,5 +1,8 @@
 services:
   web:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: beatcell-white:latest
     restart: always
     ports:
